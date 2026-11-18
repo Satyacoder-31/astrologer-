@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800;900&family=Noto+Sans+Devanagari:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,700;1,400&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-cinzel: 'Cinzel', serif;
+  --font-poppins: 'Poppins', sans-serif;
+  --font-devanagari: 'Noto Sans Devanagari', sans-serif;
+  --font-playfair: 'Playfair Display', serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html, body {
+  background-color: #000000;
+  color: #F5F1E8;
+  font-family: var(--font-poppins);
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+/* Custom Deep Space Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+::-webkit-scrollbar-thumb {
+  background: #141c38;
+  border-radius: 9999px;
+  border: 1px solid rgba(212, 175, 98, 0.3);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #D4AF62;
+}
+
+/* Void Glassmorphism Panels */
+.glass-panel {
+  background: rgba(3, 4, 12, 0.65);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(212, 175, 98, 0.2);
+}
+
+.glass-panel-hover {
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.glass-panel-hover:hover {
+  background: rgba(8, 12, 28, 0.85);
+  border-color: rgba(212, 175, 98, 0.55);
+  box-shadow: 0 0 35px rgba(212, 175, 98, 0.22);
+}
+
+.gold-gradient-text {
+  background: linear-gradient(135deg, #F5DF9E 0%, #D4AF62 50%, #9E7B31 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-border-glow {
+  box-shadow: 0 0 25px rgba(212, 175, 98, 0.3);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.35s ease-out forwards;
+}
+
+/* Shooting star streak keyframes */
+@keyframes shootingStar {
+  0% {
+    transform: translateX(0) translateY(0) rotate(-45deg) scale(0);
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-400px) translateY(400px) rotate(-45deg) scale(1);
+    opacity: 0;
+  }
+}
