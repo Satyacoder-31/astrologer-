@@ -23,6 +23,8 @@ import {
   CheckCircle2,
   ChevronLeft,
   Calculator,
+  BookOpen,
+  ExternalLink,
 } from 'lucide-react';
 
 export default function AstrologerProfilePage() {
@@ -372,6 +374,36 @@ export default function AstrologerProfilePage() {
           </div>
         </div>
       </div>
+
+      {/* Published Author Showcase Banner */}
+      {astrologer.publication && (
+        <div className="p-6 md:p-8 rounded-3xl bg-gradient-to-r from-cosmic-midnight via-cosmic-galaxy to-cosmic-midnight border border-cosmic-gold/50 shadow-goldGlow flex flex-col md:flex-row items-center justify-between gap-6">
+          <div className="space-y-2 text-center md:text-left">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cosmic-gold/15 border border-cosmic-gold/40 text-cosmic-gold text-xs font-bold uppercase">
+              <BookOpen className="w-3.5 h-3.5 text-cosmic-gold" />
+              Published Book on Amazon
+            </div>
+            <h4 className="text-xl md:text-2xl font-cinzel font-bold text-cosmic-white">
+              &quot;{astrologer.publication.title}&quot;
+            </h4>
+            <p className="text-xs md:text-sm text-cosmic-white/80 max-w-2xl font-poppins leading-relaxed">
+              {astrologer.publication.description}
+            </p>
+            <div className="text-[11px] text-cosmic-peacock font-semibold pt-1">
+              • Ph.D. Doctoral Research: Transcendental sound vibration of the Hare Krishna Maha-Mantra & higher spiritual consciousness.
+            </div>
+          </div>
+          <a
+            href={astrologer.publication.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-6 py-3.5 rounded-xl bg-gold-gradient text-cosmic-midnight font-cinzel font-bold text-xs uppercase tracking-wider shadow-goldGlow hover:scale-105 transition-transform flex items-center gap-2 whitespace-nowrap flex-shrink-0"
+          >
+            <span>View on Amazon India</span>
+            <ExternalLink className="w-4 h-4" />
+          </a>
+        </div>
+      )}
 
       {/* 4. Pricing & 5. Availability and Working Hours Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

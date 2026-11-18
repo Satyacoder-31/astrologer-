@@ -333,11 +333,10 @@ export default function HomePage() {
               <button
                 key={spec}
                 onClick={() => setSelectedSpecialization(spec)}
-                className={`px-3.5 py-1.5 rounded-xl text-xs font-cinzel font-semibold transition-all ${
-                  selectedSpecialization === spec
+                className={`px-3.5 py-1.5 rounded-xl text-xs font-cinzel font-semibold transition-all ${selectedSpecialization === spec
                     ? 'bg-gold-gradient text-cosmic-midnight shadow-goldGlow'
                     : 'bg-black/70 border border-cosmic-border/40 text-cosmic-white/80 hover:border-cosmic-gold/50'
-                }`}
+                  }`}
               >
                 {spec}
               </button>
@@ -698,11 +697,10 @@ export default function HomePage() {
               <button
                 key={key}
                 onClick={() => setActiveZodiacKey(key)}
-                className={`p-2.5 rounded-2xl flex flex-col items-center justify-center text-center transition-all ${
-                  isSelected
+                className={`p-2.5 rounded-2xl flex flex-col items-center justify-center text-center transition-all ${isSelected
                     ? 'bg-gold-gradient text-cosmic-midnight shadow-goldGlow scale-105 font-bold'
                     : 'bg-black/70 border border-cosmic-border/30 text-cosmic-white/70 hover:border-cosmic-gold/50'
-                }`}
+                  }`}
               >
                 <span className="text-xl leading-none">{z.symbol}</span>
                 <span className="text-[10px] font-cinzel mt-1 uppercase truncate w-full">{z.sign}</span>
@@ -846,11 +844,10 @@ export default function HomePage() {
                 <button
                   key={d.title}
                   onClick={() => setActiveDilemmaIndex(idx)}
-                  className={`px-4 py-2 rounded-xl text-xs font-poppins transition-all ${
-                    activeDilemmaIndex === idx
+                  className={`px-4 py-2 rounded-xl text-xs font-poppins transition-all ${activeDilemmaIndex === idx
                       ? 'bg-gold-gradient text-cosmic-midnight font-bold shadow-goldGlow'
                       : 'bg-black/70 border border-cosmic-border/40 text-cosmic-white/70 hover:border-cosmic-gold/50'
-                  }`}
+                    }`}
                 >
                   {d.title}
                 </button>
@@ -1002,11 +999,10 @@ export default function HomePage() {
                   className={`flex flex-col ${msg.sender === 'user' ? 'items-end' : 'items-start'}`}
                 >
                   <div
-                    className={`max-w-[80%] rounded-2xl px-4 py-2.5 text-xs font-poppins leading-relaxed ${
-                      msg.sender === 'user'
+                    className={`max-w-[80%] rounded-2xl px-4 py-2.5 text-xs font-poppins leading-relaxed ${msg.sender === 'user'
                         ? 'bg-gold-gradient text-cosmic-midnight font-medium rounded-br-sm'
                         : 'bg-black/90 border border-cosmic-border/50 text-cosmic-white rounded-bl-sm'
-                    }`}
+                      }`}
                   >
                     {msg.text}
                   </div>

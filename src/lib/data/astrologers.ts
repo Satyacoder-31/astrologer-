@@ -30,6 +30,12 @@ export interface Astrologer {
     repeatClients: number;
     accuracyScore: string;
   };
+  publication?: {
+    title: string;
+    link: string;
+    description: string;
+    asin?: string;
+  };
   reviews: {
     id: string;
     userName: string;
@@ -45,8 +51,8 @@ export const ASTROLOGERS_DATABASE: Astrologer[] = [
   {
     id: 'dr-amit-deshmukh',
     name: 'Dr. Amit Deshmukh',
-    title: 'Vedic Astrologer, Vastu & Prashna Specialist',
-    avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=400',
+    title: 'Vedic Astrologer, Vastu & Prashna Specialist • Ph.D. Scholar & Author',
+    avatar: '/images/astrologers/dr-amit-deshmukh.jpg',
     isVerified: true,
     isTopChoice: true,
     experienceYears: 9,
@@ -67,18 +73,26 @@ export const ASTROLOGERS_DATABASE: Astrologer[] = [
     consultationCount: 4890,
     status: 'online',
     availability: 'Monday to Sunday, 10 AM – 6 PM',
-    bio: 'Dr. Amit Deshmukh has 9 years of experience in astrology and related consultation services. He provides guidance to people facing challenges in different areas of life.',
-    about: 'Dr. Amit Deshmukh has 9 years of experience in astrology and related consultation services. He provides guidance to people facing challenges in different areas of life.\n\nHis specializations include career, business, marriage, love relationships, finance, health and family matters. He combines traditional Vedic knowledge with practical remedies.',
+    bio: 'Dr. Amit Deshmukh has 9 years of experience in astrology and related consultation services. He provides guidance to people facing challenges in different areas of life. Author of "Experiences of Extraordinary Pleasure" with a Ph.D. thesis on the Hare Krishna Maha-Mantra and higher spiritual taste.',
+    about: 'Dr. Amit Deshmukh has 9 years of experience in astrology and related consultation services. He provides guidance to people facing challenges in different areas of life.\n\nHis specializations include career, business, marriage, love relationships, finance, health and family matters. He combines traditional Vedic knowledge with practical remedies.\n\nHe has completed his doctoral research (Ph.D. Thesis) on the transcendental sound vibration of the Hare Krishna Maha-Mantra and higher spiritual taste, and is the published author of the book "Experiences of Extraordinary Pleasure".',
     education: [
-      'Doctor of Philosophy (Ph.D.) in Vedic Astrology',
+      'Ph.D. Thesis on Hare Krishna Maha-Mantra & Higher Taste of Spiritual Consciousness',
+      'Doctor of Philosophy (Ph.D.) in Vedic Astrology & Philosophy',
       'Jyotish Praveena & Jyotish Visharada',
       'Master of Arts in Sanskrit Literature',
     ],
     certifications: [
+      'Author of "Experiences of Extraordinary Pleasure" (Available on Amazon)',
       'Certified Prashna Kundali Acharya',
       'Master Certified Vastu Consultant',
       'Federation of Indian Astrologers Gold Medalist',
     ],
+    publication: {
+      title: 'Experiences of Extraordinary Pleasure',
+      link: 'https://www.amazon.in/Experiences-Extraordinary-pleasure-Jayant-Deshmukh/dp/8199098090?s=bazaar',
+      description: 'Authored by Dr. Amit Jayant Deshmukh, exploring profound spiritual ecstasy, transcendental consciousness, and higher taste through sacred Vedic chanting and the Hare Krishna Maha-Mantra.',
+      asin: '8199098090',
+    },
     servicesOffered: [
       { name: 'Prashna Kundali', description: 'Answers through question-based astrology' },
       { name: 'Vedic Astrology', description: 'Traditional birth-chart analysis' },

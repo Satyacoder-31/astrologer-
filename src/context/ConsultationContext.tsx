@@ -355,7 +355,7 @@ export const ConsultationProvider: React.FC<{ children: React.ReactNode }> = ({ 
       id: 'session_live_' + Date.now(),
       astrologerId: 'dr-amit-deshmukh',
       astrologerName: 'Dr. Amit Deshmukh',
-      astrologerAvatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=400',
+      astrologerAvatar: '/images/astrologers/dr-amit-deshmukh.jpg',
       userId: user?.id || 'usr-1',
       userName: user?.name || 'Blessed Seeker',
       type: 'Chat' as ConsultationType,
